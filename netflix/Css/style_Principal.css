@@ -1,0 +1,231 @@
+ * {
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+
+     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+             /* preto com 70% de transparência */
+             rgba(0, 0, 0, 0.7)),
+         url(https://cdn.wallpapersafari.com/24/74/zgeTuV.jpg);
+     background-size: cover;
+     background-position: top center;
+
+ }
+
+
+#heading .heade {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+ .logo-N img {
+     margin-left: 10%;
+     height: 60px;
+     max-width: 100%;
+ }
+
+ .heade {
+     padding: 20px 50px;
+     position: relative;
+     z-index: 10;
+ }
+
+ .sign-in {
+     margin-right: 10%;
+     margin-top: 10%;
+ }
+
+ .login-ente {
+     top: 5%;
+     position: relative;
+     height: 70%;
+     margin-left: 8%;
+     color: white;
+     border-radius: 3px;
+     text-decoration: none;
+     font-size: 14px;
+ }
+
+/* Container que agrupa seletor + botão */
+.ico-bt {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-slt {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.language-slt .icon {
+    position: absolute;
+    align-items: center;
+    left: 8px;
+    left: 10px;
+    font-size: 18px;
+    color: white;
+    pointer-events: none;
+}
+
+.language-slt select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    padding: 8px 30px 8px 35px; /* espaço extra pro ícone */
+    border-radius: 4px;
+    font-size: 14px;
+    height: 35px;
+    min-width: 140px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Setinha personalizada */
+.language-slt::after {
+    content: "⏷";
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    right: 12px;
+    top: 45%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
+/* Botão entrar */
+.bt {
+    background-color: #e50914;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.bt:hover {
+    background-color: #f50713c3;
+}
+
+
+
+ #heading p {
+     text-decoration: none;
+     color: rgb(248, 16, 16);
+     font-family: sans-serif;
+ }
+
+
+ #Container .Titulo {
+     text-align: center;
+     color: white;
+     font-size: 40px;
+     margin-top: 100px;
+     font-family: sans-serif;
+ }
+
+ #Container p {
+     text-align: center;
+     color: white;
+     font-size: 20px;
+     margin-top: 20px;
+     font-family: sans-serif;
+ }
+
+ .formulario {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* caixa que agrupa input + label */
+.input-box {
+    position: relative;
+    display: inline-block;
+}
+
+.input-box input {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.363);
+    border-radius: 5px;
+    height: 30px;
+    width: 400px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.input-box input:focus {
+    border: 1px solid rgba(182, 172, 172, 0.858);  
+
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.985); 
+
+}
+
+
+/* Chrome, Safari, Edge */
+.input-box input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    -webkit-text-fill-color: white;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+.input-box input:-moz-autofill {
+    box-shadow: 0 0 0px 1000px transparent inset;
+    -moz-text-fill-color: white;
+}
+
+.input-box label {
+    position: absolute;
+    top: 65%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: white;
+    pointer-events: none;
+    transition: 0.3s ease;
+    font-size: 16px;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: 30px;
+    left: 10px;
+    font-size: 12px;
+    color: #aaa;
+    background-color: transparent;
+}
+
+ .formulario button {
+    height: 60px;
+     padding: 15px 25px;
+     font-size: 16px;
+     border: none;
+     border-radius: 5px;
+     background-color: #e50914;
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+    }
+
+    .formulario button:hover {
+    background-color: #f50713c3;
+}

@@ -1,0 +1,485 @@
+  * {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      background-image: url(../img/background.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 150vh;
+      max-width: 100%;
+      position: relative;
+  }
+
+  body::before {
+      content: "";
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.4);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+  }
+
+  .logo img {
+      margin-left: 80px;
+      height: 60px;
+      max-width: 100%;
+  }
+
+  .header {
+      padding: 20px 50px;
+      position: relative;
+      z-index: 10;
+  }
+
+
+  .login_body {
+      padding: 60px;
+      position: relative;
+      z-index: 98;
+      max-width: 500px;
+      min-width: 250px;
+      height: 760px;
+      margin-left: 50%;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 4px;
+      box-sizing: border-box;
+      transform: translate(-50%, 0);
+  }
+
+  .login_body h2 {
+      font-size: 32px;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 20px;
+      margin-left: 15px;
+  }
+
+  .login_body input {
+      font-size: 15px;
+      height: 55px;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-left: 15px;
+      border: 2px solid #999;
+      border-radius: 5px;
+      background: transparent;
+      color: white;
+      box-sizing: border-box;
+      outline: none;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .input_box {
+      margin-bottom: 25px;
+      position: relative;
+      margin-bottom: 20px;
+      width: 90%;
+  }
+
+  .input_box input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.95) inset !important;
+      -webkit-text-fill-color: white !important;
+      border: 1px solid rgb(124, 119, 119);
+  }
+
+  .input_box input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.95) inset !important;
+      -webkit-text-fill-color: white !important;
+      border: 1px solid rgb(124, 119, 119);
+  }
+
+  .input_box label {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+      color: #aaa;
+      font-size: 15px;
+      pointer-events: none;
+      transition: 0.3s ease;
+  }
+
+  .input_box input:focus+label,
+  .input_box input:not(:placeholder-shown)+label {
+      top: 10px;
+      left: 20px;
+      font-size: 12px;
+      color: white;
+      background: black;
+      padding: 0 5px;
+      border-radius: 3px;
+  }
+
+  .login_body input:invalid:focus {
+      border: 2px solid white;
+      box-shadow: 0 0 2px white;
+      color: white;
+  }
+
+
+  .login_body input:focus:invalid {
+      border: 2px solid #999;
+      box-shadow: 0 0 0 2px white;
+  }
+
+
+  .login_body button {
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 10px;
+      height: 40px;
+      width: 90%;
+      padding: 15px;
+      margin-left: 15px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: transparent;
+      background-color: #e50914;
+      color: white;
+
+  }
+
+  .login_body button:hover {
+      cursor: pointer;
+      filter: brightness(85%);
+      transition: 0.3s ease;
+  }
+
+  .login_body .botao2 {
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      height: 40px;
+      width: 90%;
+      margin: 10px auto;
+      margin-top: 15px;
+      display: block;
+      border-radius: 5px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.215);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.4s ease;
+      ;
+  }
+
+  .login_body .botao2:hover {
+      background-color: rgba(247, 244, 244, 0.2);
+  }
+
+  .login_body .codeg p {
+      color: #b3b3b3;
+      text-align: center;
+      margin-top: 16px;
+
+  }
+
+  .support {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+
+  }
+
+  .support .help a {
+      color: #fff;
+      font-size: 16px;
+
+  }
+
+  .support .remember {
+      align-self: flex-start;
+      margin-top: 25px;
+      display: flex;
+      color: #b3b3b3;
+      font-size: 14px;
+  }
+
+  .remember {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+  }
+
+  .remember input[type="checkbox"] {
+      all: unset;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+      border: 2px solid #fff;
+      border-radius: 0;
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+      vertical-align: middle;
+  }
+
+
+  .remember input[type="checkbox"]:checked {
+      background-color: #fff;
+  }
+
+  .remember input[type="checkbox"]:checked::after {
+      content: "✔";
+      font-size: 14px;
+      color: black;
+      position: absolute;
+      top: -2px;
+      left: 2px;
+      pointer-events: none;
+      transform: rotate(10deg);
+  }
+
+  .remember label {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+  }
+
+  .information .sing_up {
+      display: flex;
+      font-size: 16px;
+      margin-top: 17px;
+      color: #cac7c7;
+
+  }
+
+  .information .sing_up a {
+      text-decoration: none;
+      color: white;
+  }
+
+  .information .sing_up a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+  }
+
+  .information .sing_up a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+  }
+
+  .information .terms {
+      font-size: 14px;
+      color: #989494;
+      margin-top: 25px;
+      line-height: 1.4;
+  }
+
+  .information .saber {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #0080ff;
+  }
+
+  .information .saber:hover {
+      text-decoration: underline;
+      color: #1E90FF;
+  }
+
+  footer {
+      height: 20%;
+      margin-top: 100px;
+      background-color: #141414;
+      color: #757575;
+      padding: 40px 20px;
+      font-size: 15px;
+      position: relative;
+      z-index: 10;
+  }
+
+  .footer_container {
+      max-width: 1000px;
+      padding: 20px;
+      margin-top: 20px;
+      margin-left: 130px;
+  }
+
+  .footer_container p {
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #a8a3a3;
+  }
+
+  .footer-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+  }
+
+  .footer-links a {
+      color: #aeaaaa;
+      font-size: 15px;
+  }
+
+  .footer-links a:hover {
+      text-decoration: underline;
+  }
+
+
+  .language-select {
+      position: relative;
+      display: inline-block;
+  }
+
+  .language-select .icon {
+      position: absolute;
+      left: 10px;
+      top: 35%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 15px;
+      pointer-events: none;
+  }
+
+  .language-select select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: rgba(20, 20, 20, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      padding: 8px 36px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      height: 35px;
+      min-width: 140px;
+      cursor: pointer;
+      outline: none;
+  }
+
+  .language-select::after {
+      content: "⏷";
+      position: absolute;
+      right: 10px;
+      top: 45%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      color: white;
+      pointer-events: none;
+  }
+
+  /* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+  /* Tablets (até 1024px) */
+  @media (max-width: 1024px) {
+      .login_body {
+          width: 90%;
+          margin: 0 auto;
+          transform: none;
+          padding: 40px 20px;
+          height: auto;
+      }
+
+      .footer_container {
+          margin-left: 20px;
+          margin-right: 20px;
+      }
+  }
+
+  /* Celulares grandes (até 768px) */
+  @media (max-width: 768px) {
+
+      /* Fundo preto no celular */
+      body {
+          background: black !important;
+      }
+
+      body::before {
+          background: black !important;
+      }
+
+      .logo img {
+          height: 45px;
+      }
+
+      .login_body {
+          width: 95%;
+          margin: 0 auto;
+          padding: 30px 15px;
+      }
+
+      .login_body h2 {
+          font-size: 26px;
+          margin-left: 10px;
+      }
+
+      .login_body input {
+          width: calc(111% - 30px);
+          margin-left: 15px;
+      }
+
+      .login_body button,
+      .login_body .botao2 {
+          width: calc(100% - 30px);
+          margin-left: 15px;
+      }
+
+      .footer_container {
+          margin-left: 0;
+          padding: 20px;
+      }
+
+      .footer-links {
+          grid-template-columns: 1fr;
+          text-align: center;
+      }
+
+      .language-select {
+          display: block;
+          margin: 0 auto;
+          margin-top: 15px;
+      }
+  }
+
+  /* Celulares pequenos (até 480px) */
+  @media (max-width: 480px) {
+      .logo img {
+          margin-left: 10px;
+          height: 40px;
+      }
+
+      .login_body {
+          padding: 20px 15px;
+      }
+
+      .login_body h2 {
+          font-size: 22px;
+          margin-left: 5px;
+      }
+
+      .support {
+          font-size: 14px;
+      }
+
+      .information .sing_up {
+          font-size: 14px;
+      }
+
+      .information .terms,
+      .information .saber {
+          font-size: 12px;
+      }
+
+      footer {
+          font-size: 13px;
+          padding: 20px;
+      }
+  }
